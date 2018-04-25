@@ -32,5 +32,10 @@ For Creating Docker Image using Dockerfile
       [token]
       # provider = fernet      
 * use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword .
-* wait and check the image from docker image
+* wait and check the image from docker images
+* open respective port of keystone:5000, httpd:80 on host
+If selinux is enabled then
+* setsebool -P httpd_use_openstack on 
+* setsebool -P httpd_can_network_connect on 
+* setsebool -P httpd_can_network_connect_db on 
 
