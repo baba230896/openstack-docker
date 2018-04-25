@@ -1,1 +1,4 @@
-dsdf
+line 17
+bind-address
+
+docker run -d --net=host  --name=mariadb_node #mariadb_image
