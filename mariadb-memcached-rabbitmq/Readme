@@ -7,7 +7,7 @@ Docker Image Contains:
 Docker image can be download from docker hub: docker pull baba230896/centos_d-mariadb-memcached-rabbitmq
 
 For Creating Docker image from Dockerfile
-* copy all the mariadb-memcached-rabbitmq folder to your host and get into the directory
+* copy mariadb-memcached-rabbitmq folder to your host and get into the directory
 * change configuration files as per requirements 
   * for ntp.conf
     use your ntp server for better convenience
