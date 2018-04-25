@@ -6,7 +6,7 @@ FROM centos/systemd
 RUN yum -y install ntp; yum -y install centos-release-openstack-queens
 RUN sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/CentOS-OpenStack-queens.repo
 RUN yum --enablerepo=centos-openstack-queens -y install mariadb-server
-RUN yum install epel-release
+RUN yum -y install epel-release
 RUN yum --enablerepo=epel -y install rabbitmq-server memcached
 
 #remove & add previous config file
