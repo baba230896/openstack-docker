@@ -4,7 +4,7 @@ Docker Image Contains:
 # rabbitmq
 # centos with systemd
 
-Docker image can be download from docker hub
+Docker image can be download from docker hub: docker pull baba230896/centos_d-mariadb-memcached-rabbitmq
 
 For Docker image from Dockerfile
 * copy all the mariadb-memcached-rabbitmq folder to your host and get into the directory
