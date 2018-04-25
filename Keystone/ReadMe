@@ -1,2 +1,36 @@
-Docker Image:
-#cento
+Docker Image Contains:
+# centos with systemd
+# keystone
+
+Add a User and Database on MariaDB for Keystone
+* for noobs
+  # create database keystone;
+  # grant all privileges on keystone.* to keystone@'localhost' identified by 'password'; 
+  # grant all privileges on keystone.* to keystone@'%' identified by 'password';
+  # flush privileges;
+  # exit
+
+It contains some docker build arguments so you have to create your own docker image 
+# keystone_host
+# password = adminpassword [ default ]
+
+For Creating Docker Image using Dockerfile
+* copy keystone folder to your host and get into the directory
+* change configuration files as per requirements 
+  * for ntp.conf
+    use your ntp server for better convenience
+  * for keystone.conf
+    * We have to generate a random token to access the Keystone service, as shown in the following commands: 
+      # python -c "from uuid import uuid4; print uuid4()" 
+      # openssl rand  -hex 10
+    * Replace admin_token with the random token that gets generated,  as shown in this configuration option: 
+      # admin_token = 01d8b673-9ebb-41d2-968a-d2a85daa1324  
+    * memcache_servers = ip:11211
+    * ( MariaDB connection info ) - change mariadb_host, password, username, database name
+      # connection = mysql+pymysql://username:password@mariadb_host/database_name
+    * search this type of block [token] and changes its provider 
+      [token]
+      # provider = fernet      
+* use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword .
+* wait and check the image from docker image
+
