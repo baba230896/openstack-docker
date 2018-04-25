@@ -1,4 +1,3 @@
-#mariadb server
 FROM centos/systemd
 
 #installation ntp, mariadb, rabbitmq, memcached
