@@ -1,3 +1,9 @@
+Docker Image Contains: 
+# mariadb-server
+# memcached 
+# rabbitmq
+# centos with systemd
+
 Docker image can be download from docker hub
 
 For Docker image from Dockerfile
@@ -11,8 +17,14 @@ For Docker image from Dockerfile
 * wait and check the image from docker image
 
 For Container
+* open respective port of mariadb:3306, rabbitmq:5672, memcached:11211 and ntp:123 on your host
 * use docker run -d --name=depends_on_you --net=host image_id
 * for persistant storage you can use -v option
-* open respective port of mariadb:3306, rabbitmq:5672, memcached:11211 and ntp:123 on your host
 * after all steps you can use all services on host_ip:port with respective client
+
+* use mysql_secure_installation 
+
+add openstack user in rabbitmq-server (set any password you like for "password")
+* rabbitmqctl add_user openstack password
+* rabbitmqctl set_permissions openstack ".*" ".*" ".*"
 
