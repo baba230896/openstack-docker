@@ -1,6 +1,0 @@
-For 
-After creating the docker image from Dockerfile 
-line 17
-bind-address
-
-docker run -d --net=host  --name=mariadb_node #mariadb_image
