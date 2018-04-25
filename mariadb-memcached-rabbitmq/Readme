@@ -1,0 +1,18 @@
+Docker image can be download from docker hub
+
+For Docker image from Dockerfile
+* copy all the mariadb-memcached-rabbitmq folder to your host and get into the directory
+* change configuration files as per requirements 
+  * for ntp.conf
+    use your ntp server for better convenience
+  * for my.cnf
+    use bind-address as 0.0.0.0 for all devices or as per your ip address of network interface
+* use docker build -t imagename:version .
+* wait and check the image from docker image
+
+For Container
+* use docker run -d --name=depends_on_you --net=host image_id
+* for persistant storage you can use -v option
+* open respective port of mariadb:3306, rabbitmq:5672, memcached:11211 and ntp:123 on your host
+* after all steps you can use all services on host_ip:port with respective client
+
