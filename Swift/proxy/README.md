@@ -26,6 +26,6 @@ or another method to done this
 
 # download docker image  
 docker pull baba230896/swift-proxy
-then perform required changes in configuration, swift-ring-builder configurations and in last 
-restart services. make  image of your container and lanuch instance.
+* then perform required changes in configuration, swift-ring-builder configurations and in last 
+* restart services. make  image of your container and lanuch instance.
 
