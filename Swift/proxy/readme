@@ -1,1 +1,27 @@
+For Creating Docker Image from Dockerfile
+
+* copy the proxy folder in your host
+* config the configurations file as per requirements
+  * ntp server
+  * swift.conf
+  * proxy-server.conf
+ 
+# swift.conf - as per requirements and reference with https://docs.openstack.org/swift/queens/install/finalize-installation-rdo.html
+# proxy-server.conf - as per requirements and reference with https://docs.openstack.org/swift/queens/install/controller-install-rdo.html
+
+* use docker build -t imagename:version .
+* launch container instance with --net=host and run swift-ring-builder commands with storage nodes arguments take reference from 
+https://docs.openstack.org/swift/queens/install/initial-rings.html
+* run chown swift. /etc/swift/*.gz
+* restart your all services or restart your container
+* after this you can move towards to installation of swift-storage nodes
+
+* Copy all the ring files from proxy node to storage nodes for this copy all the ring files to files folder of storage.
+* then use storage docker file.
+
+
+
+
+
+ 
 
