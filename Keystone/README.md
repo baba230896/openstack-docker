@@ -30,7 +30,7 @@ It contains some docker build arguments so you have to create your own docker im
       # connection = mysql+pymysql://username:password@mariadb_host/database_name
     * search this type of block [token] and changes its provider 
       [token]
-      # provider = fernet     
+      provider = fernet     
 * use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword \
      --build-arg keystone_user=keystone_user .
 * wait and check the image from docker images
