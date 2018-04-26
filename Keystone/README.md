@@ -36,7 +36,9 @@ It contains some docker build arguments so you have to create your own docker im
 * wait and check the image from docker images
 * open respective port of keystone:5000 and 35357, httpd:80 on host
 
-# For Container : docker run -d --net=host image_id
+# For Container : 
+
+docker run -d --net=host image_id
 
 If selinux is enabled then
 * setsebool -P httpd_use_openstack on 
@@ -44,24 +46,13 @@ If selinux is enabled then
 * setsebool -P httpd_can_network_connect_db on 
 
 For Verify Keystone Service ( all commands run for keystone client packages like centos: openstack-utils python-openstackclient)
-$ export OS_USERNAME=admin
-$ export OS_PASSWORD=ADMIN_PASSWORD (which is used in docker build command)
-$ export OS_PROJECT_NAME=admin
-$ export OS_USER_DOMAIN_NAME=Default
-$ export OS_PROJECT_DOMAIN_NAME=Default
-$ export OS_AUTH_URL=http://keystone_host:35357/v3
-$ export OS_IDENTITY_API_VERSION=3
+* export OS_USERNAME=admin
+* export OS_PASSWORD=ADMIN_PASSWORD (which is used in docker build command)
+* export OS_PROJECT_NAME=admin
+* export OS_USER_DOMAIN_NAME=Default
+* export OS_PROJECT_DOMAIN_NAME=Default
+* export OS_AUTH_URL=http://keystone_host:35357/v3
+* export OS_IDENTITY_API_VERSION=3
 
-* openstack domain create --description "An Example Domain" example
-
-Correct Output (Example)
-
-+-------------+----------------------------------+
-| Field       | Value                            |
-+-------------+----------------------------------+
-| description | An Example Domain                |
-| enabled     | True                             |
-| id          | 2f4f80574fd84fe6ba9067228ae0a50c |
-| name        | example                          |
-+-------------+----------------------------------+
+* for verification create project and user
 
