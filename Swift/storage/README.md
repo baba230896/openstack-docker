@@ -33,7 +33,7 @@ for single volume with single docker
 * make image from above docker command and then make instance as given below 
 
 # For container single volume single docker
-* docker run -d --net=host -v /srv/node/device0:/srv/node/device0:rw image_id
+* docker run -d -v /srv/node/device0:/srv/node/device0:rw --net=host image_id
 
 for multiple volume with single docker
 * increase the build arg in docker file if you have more then 1 device, edit the Dockerfile
@@ -41,6 +41,6 @@ for multiple volume with single docker
 * make image from above docker command and then make instance as given below 
 
 # For container multiple volume single docker
-* docker run -d --net=host -v /srv/node/device0:/srv/node/device0:rw /srv/node/device1:/srv/node/device1:rw image_id
+* docker run -d -v /srv/node/device0:/srv/node/device0:rw /srv/node/device1:/srv/node/device1:rw  --net=host image_id
 
 open port in host because you are using host networking in docker 873,6200,6201,6202
