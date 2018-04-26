@@ -5,7 +5,7 @@ ARG device
 
 RUN yum -y install ntp; yum -y install centos-release-openstack-queens; yum -y install epel-release
 RUN sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/CentOS-OpenStack-queens.repo
-RUN yum --enablerepo=centos-openstack-queens,epel -y install openstack-swift-account openstack-swift-container openstack-swift-object xfsprogs rsync openssh-clients
+RUN yum --enablerepo=centos-openstack-queens,epel -y install openstack-swift-account openstack-swift-container openstack-swift-object rsync openssh-clients
 
 
 
