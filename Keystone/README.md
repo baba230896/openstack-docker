@@ -44,15 +44,15 @@ If selinux is enabled then
 * setsebool -P httpd_can_network_connect_db on 
 
 For Verify Keystone Service ( all commands run for keystone client packages like centos: openstack-utils python-openstackclient)
-export OS_USERNAME=admin
-export OS_PASSWORD=ADMIN_PASSWORD (which is used in docker build command)
-export OS_PROJECT_NAME=admin
-export OS_USER_DOMAIN_NAME=Default
-export OS_PROJECT_DOMAIN_NAME=Default
-export OS_AUTH_URL=http://keystone_host:35357/v3
-export OS_IDENTITY_API_VERSION=3
+$ export OS_USERNAME=admin
+$ export OS_PASSWORD=ADMIN_PASSWORD (which is used in docker build command)
+$ export OS_PROJECT_NAME=admin
+$ export OS_USER_DOMAIN_NAME=Default
+$ export OS_PROJECT_DOMAIN_NAME=Default
+$ export OS_AUTH_URL=http://keystone_host:35357/v3
+$ export OS_IDENTITY_API_VERSION=3
 
-openstack domain create --description "An Example Domain" example
+* openstack domain create --description "An Example Domain" example
 
 Correct Output (Example)
 
