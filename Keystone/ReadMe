@@ -1,4 +1,5 @@
-Note: Use this when you are willing to create own docker image easily & use as a templates, if not then go to above shown directory From Docker image and download keystone docker image
+Note: Use this when you are willing to create own docker image easily & use as a templates, 
+      if not then go to above shown directory From Docker image and download keystone docker image
 Docker Image Contains:
 # centos with systemd
 # keystone
@@ -30,7 +31,8 @@ For Creating Docker Image using Dockerfile
       [token]
       # provider = fernet     
       
-* use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword --build-arg keystone_user=keystone_user.
+* use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword \
+     --build-arg keystone_user=keystone_user .
 * wait and check the image from docker images
 * open respective port of keystone:5000, httpd:80 on host
 
