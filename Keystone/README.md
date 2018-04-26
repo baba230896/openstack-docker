@@ -27,7 +27,7 @@ It contains some docker build arguments so you have to create your own docker im
   * for keystone.conf 
     * memcache_servers = ip:11211
     * ( MariaDB connection info ) - change mariadb_host, password, username, database name
-      # connection = mysql+pymysql://username:password@mariadb_host/database_name
+      connection = mysql+pymysql://username:password@mariadb_host/database_name
     * search this type of block [token] and changes its provider 
       [token]
       provider = fernet     
@@ -55,6 +55,7 @@ export OS_IDENTITY_API_VERSION=3
 openstack domain create --description "An Example Domain" example
 
 Correct Output (Example)
+
 +-------------+----------------------------------+
 | Field       | Value                            |
 +-------------+----------------------------------+
