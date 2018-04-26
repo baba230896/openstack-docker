@@ -22,7 +22,11 @@ EXAMPLE: /dev/sdb1 /srv/node/device0
 
 * /srv/node is embedded in Dockerfile, if you want to change you can
 
-this docker file contain build arg device (same as mount point)
+if selinux is enabled then
+* semanage fcontext -a -t swift_data_t /srv/node/device0 
+* restorecon /srv/node/device0
+
+this docker file contain build arg device
 --
 for single volume with single docker
 * docker build -t --build-arg device=device_name image:version .
