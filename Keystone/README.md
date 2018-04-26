@@ -54,5 +54,5 @@ For Verify Keystone Service ( all commands run for keystone client packages like
 * export OS_AUTH_URL=http://keystone_host:35357/v3
 * export OS_IDENTITY_API_VERSION=3
 
-* for verification create project and user
+ for verification create project and user
 
