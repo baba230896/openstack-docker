@@ -17,7 +17,7 @@ It contains some docker build arguments so you have to create your own docker im
 
 For Creating Docker Image using Dockerfile
 * copy keystone folder to your host and get into the directory
-* change configuration files as per requirements 
+* change configuration files as per requirements  ( Basic changes you have to done )
   * for ntp.conf
     use your ntp server for better convenience
     
@@ -27,7 +27,8 @@ For Creating Docker Image using Dockerfile
       # connection = mysql+pymysql://username:password@mariadb_host/database_name
     * search this type of block [token] and changes its provider 
       [token]
-      # provider = fernet      
+      # provider = fernet     
+      
 * use docker build -t imagename:version --build-arg keystone_host=keystone_host_ip --build-arg password=adminpassword --build-arg keystone_user=keystone_user.
 * wait and check the image from docker images
 * open respective port of keystone:5000, httpd:80 on host
