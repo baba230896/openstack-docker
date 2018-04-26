@@ -1,3 +1,4 @@
+Note: Use this when you are willing to create own docker image easily & use as a templates, if not then go to above shown directory From Docker image and download keystone docker image
 Docker Image Contains:
 # centos with systemd
 # keystone
