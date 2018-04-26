@@ -19,6 +19,8 @@ https://docs.openstack.org/swift/queens/install/initial-rings.html
 * Copy all the ring files from proxy node to storage nodes for this copy all the ring files to files folder of storage.
 * then use storage docker file.
 
+or download docker image from then perform required changes with restart services
+
 
 
 
