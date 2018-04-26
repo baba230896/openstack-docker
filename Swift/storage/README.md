@@ -24,7 +24,7 @@ EXAMPLE: /dev/sdb1 /srv/node/device0
 
 this docker file contain build arg device (same as mount point)
 --
-
+increase the build arg in docker file if you have more then 1 device
 * docker build -t --build-arg device=device_name  image:version .
 make image from above docker command and then make instance as given below 
 
