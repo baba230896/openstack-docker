@@ -14,6 +14,7 @@ For Creating Docker Image from Dockerfile
 https://docs.openstack.org/swift/queens/install/initial-rings.html
 * run chown swift. /etc/swift/*.gz
 * restart your all services or restart your container 
+* open respective port on host  8080 .
 * make image of your container and launch many instances of it .
 * after this you can move towards to installation of swift-storage nodes
 
@@ -21,7 +22,7 @@ https://docs.openstack.org/swift/queens/install/initial-rings.html
 * then use storage docker file.
 
 or download docker image from 
-
+docker pull baba230896/swift-proxy
 then perform required changes in configuration, swift-ring-builder configurations and in last 
 restart services. make  image of your container and lanuch instance.
 
