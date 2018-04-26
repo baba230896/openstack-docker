@@ -1,3 +1,5 @@
 Pull docker image from below link
 
+docker pull baba230896/keystone_direct
+
 and perform configurations as per requirements.
