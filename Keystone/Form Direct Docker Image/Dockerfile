@@ -1,7 +1,5 @@
 FROM centos/systemd
-ARG keystone_host
-ARG password=adminpassword
-ARG keystone_user
+
 
 #install keystone
 
