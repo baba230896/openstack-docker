@@ -10,17 +10,17 @@
 > ntp.conf 
 reference of https://docs.openstack.org/swift/queens/install/storage-install-rdo.html
 
-# on host 
+# on docker host 
 install xfsprogs in host if centos or respective package with respective OS. swift support xfs
 make xfs formatted partition and mount in host and gives in arg of docker -v 
 
 EXAMPLE: /dev/sdb1 /srv/node/device0
-/etc/fstab entry can also done with reference of given below
+* /etc/fstab entry can also done with reference of given below
  
-/dev/sdb /srv/node/sdb xfs noatime,nodiratime,nobarrier 0 0
-/dev/sdc /srv/node/sdc xfs noatime,nodiratime,nobarrier 0 0
+* /dev/sdb /srv/node/sdb xfs noatime,nodiratime,nobarrier 0 0
+* /dev/sdc /srv/node/sdc xfs noatime,nodiratime,nobarrier 0 0
 
-/srv/node is embedded in Dockerfile, if you want to change you can
+* /srv/node is embedded in Dockerfile, if you want to change you can
 
 this docker file contain build arg device (same as mount point)
 --
