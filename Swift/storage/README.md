@@ -1,3 +1,5 @@
+# under testing : issue : docker -v use host ownership. 
+
 # For building docker image
 
 * Copy storage folder on your host
