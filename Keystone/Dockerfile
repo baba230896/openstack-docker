@@ -5,17 +5,14 @@ ARG keystone_user
 
 #install keystone
 
-RUN yum -y install ntp; yum -y install centos-release-openstack-queens; yum -y install epel-release
+RUN yum -y install ntp centos-release-openstack-queens epel-release
 RUN sed -i -e "s/enabled=1/enabled=0/g" /etc/yum.repos.d/CentOS-OpenStack-queens.repo
 RUN yum --enablerepo=centos-openstack-queens,epel -y install openstack-keystone  httpd mod_wsgi
 
-
 #remove and add configuration files
-
 
 RUN rm -f /etc/ntp.conf
 ADD files/ntp.conf /etc/ntp.conf
-
 
 RUN rm -f /etc/keystone/keystone.conf
 ADD files/keystone.conf /etc/keystone/keystone.conf
@@ -42,7 +39,7 @@ RUN ln -s /usr/share/keystone/wsgi-keystone.conf /etc/httpd/conf.d/
 #enable services
 
 RUN yum clean all
-RUN systemctl enable ntpd; systemctl enable httpd 
+RUN systemctl enable ntpd httpd 
 
 #port expose
 
