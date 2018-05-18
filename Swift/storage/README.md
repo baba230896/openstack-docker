@@ -1,5 +1,5 @@
-# under testing : issue : docker -v use host ownership. 
-
+#issue : docker -v use host ownership. 
+Solution: provide the 777 permission to host folder which is used by the docker for storage
 # For building docker image
 
 * Copy storage folder on your host
